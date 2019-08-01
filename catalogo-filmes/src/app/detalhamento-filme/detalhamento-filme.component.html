@@ -1,0 +1,13 @@
+<mat-card class="example-card">
+    <mat-card-header>
+        <mat-card-title>titulo original: {{titulo}}</mat-card-title>
+        <mat-card-subtitle>titulo: {{titulo2}}</mat-card-subtitle>
+        <label *ngIf="mostrar">{{id}}</label>
+    </mat-card-header>
+    <img mat-card-image src="https://image.tmdb.org/t/p/w500{{imagem}}" alt="" max-width="200px">
+    <mat-card-content>
+        <p>Resumo: {{resumo}}</p>
+        <li>Lingua: {{lingua}}</li>
+        <li>Data de lançamento: {{dataLancamento}}</li>
+    </mat-card-content>
+</mat-card>
