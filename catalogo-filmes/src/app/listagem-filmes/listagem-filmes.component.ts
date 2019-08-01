@@ -10,7 +10,7 @@ import { ConsultaFilmesService } from '../servico-filmes/consulta-filmes.service
 export class ListagemFilmesComponent implements OnInit {
 
   //array
-  filmes: string[] = [];
+  filmes: any[] = [];
   arr: Object[] = [];
 
   nomeDoCurso: string = '';
@@ -33,11 +33,7 @@ export class ListagemFilmesComponent implements OnInit {
         this.arr['id'] = element.id;
         this.arr['capa'] = element.poster_path;
 
-        this.filmes.push([
-          this.arr['titulo'],
-          this.arr['id'],
-          this.arr['capa']
-        ]);
+        this.filmes.push([ this.arr['titulo'], this.arr['id'], this.arr['capa']  ]);
 
       }
       console.log(this.filmes[0][2]);
